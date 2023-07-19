@@ -7,41 +7,11 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입 페이지</title>
-<link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/signUp.css">
+<script type="text/javascript"></script>
 </head>
 <body>
-	<header>
-		<div id="main">
-			<h1><a href="http://localhost/project/">AnyTime</a></h1>
-			<div id="search">
-				<form action="">
-					<div>
-						<input id="searchKeyword" type="text" placeholder="검색어를 입력하세요." autocomplete="off">
-						<button>검색</button>
-					</div>
-				</form>
-			</div>	
-			<nav id="member">
-				<ul class="ul-1">
-					<li class="li-1"><a href="signIn.do">로그인</a></li>
-					<li class="li-1"><a href="signUp.do">회원가입</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>	
-   	<div id="index">
-       	<ul class="ul-1">
-           	<li class="li-1"><a href="">Ballad</a></li>
-           	<li class="li-1"><a href="">Classic</a></li>
-           	<li class="li-1"><a href="">Rock</a></li>
-           	<li class="li-1"><a href="">R&B</a></li>
-           	<li class="li-1"><a href="">Jazz</a></li>
-           	<li class="li-1"><a href="">J-POP</a></li>
-        </ul>
-   	</div>
-    <div id="contents">
-    	<form action="member.reg" method="post" id="joinForm">
+	<form action="member.reg" method="post" id="joinForm">
 		<h2>회원가입</h2>
 			<div class="textForm">
        			<input name="m_id" type="text" id="m_id" placeholder="아이디" autocomplete="off">
@@ -67,11 +37,43 @@
 			<div class="textForm">
        			<input name="m_gender" type="text" id="m_gender" placeholder="성별" autocomplete="off">
       		</div>
+				<!-- 
+			<table id="sut" border="1">
+				<tr>
+					<td id="m_id">아이디<input name="m_id" autocomplete="off"></td>
+				</tr>
+				<tr>
+					<td id="m_pw">비밀번호<input name="m_pw" autocomplete="off"></td>
+				</tr>
+				<tr>
+					<td id="m_name">이름<input name="m_name" autocomplete="off"></td>
+				</tr>
+				<tr>
+					<td id="m_birth">생일<input name="m_birth" autocomplete="off"></td>
+				</tr>
+				<tr>
+					<td id="m_phone">휴대폰 번호<input name="m_phone" autocomplete="off"></td>
+				</tr>
+				<tr>
+					<td id="m_email">이메일<input name="m_email" autocomplete="off"></td>
+				</tr>
+				<tr>
+					<td id="m_gender">성별<input name="m_gender" autocomplete="off"></td>
+				</tr>
+			</table>
+				 -->
 			<button id="btn">회원가입</button>
 		</form>
-    </div>
-    <footer>
-        <div id="foot">하단의 내용</div>
-    </footer>
+		<!-- 
+		 	<div>${r }</div>
+		 	<div>${signUps }</div>
+		 	<c:forEach var="s" items="${signUps }">
+		 		<div>${s.m_id }</div>
+		 		<div>${s.m_pw }</div>
+		 		<div>${s.m_name }</div>
+		 		<div>${s.m_birth }</div>
+		 	</c:forEach>
+		 -->
+		
 </body>
 </html>
