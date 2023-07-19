@@ -32,7 +32,7 @@
 	</header>
    	<div id="index">
        	<ul class="ul-1">
-           	<li class="li-1"><a href="">Ballad</a></li>
+           	<li class="li-1"><a href="Ballad.do">Ballad</a></li>
            	<li class="li-1"><a href="">Classic</a></li>
            	<li class="li-1"><a href="">Rock</a></li>
            	<li class="li-1"><a href="">R&B</a></li>
