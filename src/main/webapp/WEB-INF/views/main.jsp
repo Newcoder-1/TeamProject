@@ -22,15 +22,15 @@
 				</form>
 			</div>	
 			<nav id="member">
-				<ul>
-					<li><a href="signIn.do">로그인</a></li>
-					<li><a href="signUp.do">회원가입</a></li>
+				<ul class="ul-1">
+					<li class="li-1"><a href="signIn.do">로그인</a></li>
+					<li class="li-1"><a href="signUp.do">회원가입</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
    	<div id="index">
-       	<ul id="ul-1">
+       	<ul class="ul-1">
            	<li class="li-1"><a href="">Ballad</a></li>
            	<li class="li-1"><a href="">Classic</a></li>
            	<li class="li-1"><a href="">Rock</a></li>

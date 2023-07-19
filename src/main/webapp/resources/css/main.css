@@ -3,19 +3,16 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 }
 
 ul li {
 	list-style: none;
-	float: left;
-	margin-left: 40px;
-	margin-right: 80px;
 }
 
 a {
 	text-decoration: none;
-	coloer: black;
+	color: black;
 }
 
 #main {
@@ -23,7 +20,7 @@ a {
 	width: 100%;
     height: 95px;
 	display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     /*position: relative;*/
     min-width: 955px;
     max-width: 1600px;
@@ -35,10 +32,20 @@ a {
 
 #search {
 	border: 1px solid;
-    display: flex; 
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
 }
 
+.ul-1 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.li-1 {
+	margin: 20px;
+}
 
 #index {
 	border: 1px solid;
@@ -52,7 +59,8 @@ a {
 
 #contents {
 	border: 1px solid;
-	/*display: block;*/
+   	display: flex;
+    justify-content: space-between;
 	width: 100%;
     height: 95px;
     /*position: relative;*/
@@ -60,11 +68,9 @@ a {
     max-width: 1600px;
     min-height: 700px;
     margin: 0 auto;
-   	display: flex;
     align-items: center;
     box-sizing: border-box;
-    justify-content: space-between;
-    padding: 10px 90px 0;
+    padding: 0 90px 0;
 }
 
 footer {
@@ -95,11 +101,6 @@ footer {
 #searchKeyword:focus ~ span, #searchKeyword:valid ~ span {
   width: 100%;
 }*/
-
-
-
-
-
 
 /*#main {
     font-size: 100%;
@@ -161,7 +162,6 @@ footer {
     min-width: 240px;
     margin-left: 24px;
 }
-
 
 #member li {
 	float: left;
