@@ -9,49 +9,49 @@
 ul li {
 	list-style: none;
 	float: left;
-	margin-left: 70px;
-	
+	margin-left: 40px;
+	margin-right: 80px;
 }
 
 a {
 	text-decoration: none;
-	coloer: inherit;
+	coloer: black;
 }
 
 #main {
-	/*border: 1px solid;*/
-	/*display: block;*/
+	border: 1px solid;
 	width: 100%;
     height: 95px;
+	display: flex;
+    justify-content: space-around;
     /*position: relative;*/
     min-width: 955px;
     max-width: 1600px;
     margin: 0 auto;
-   	display: flex;
     align-items: center;
     box-sizing: border-box;
-    justify-content: space-between;
     padding: 10px 90px 0;
 }
 
-footer {
-	/*border: 1px solid;*/
-	/*display: block;*/
+#search {
+	border: 1px solid;
+    display: flex; 
+    justify-content: center;
+}
+
+
+#index {
+	border: 1px solid;
+	display: flex;
 	width: 100%;
-    height: 95px;
-    /*position: relative;*/
+    height: 100%;
     min-width: 955px;
     max-width: 1600px;
     margin: 0 auto;
-   	display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    padding: 10px 90px 0;
 }
 
 #contents {
-	/*border: 1px solid;*/
+	border: 1px solid;
 	/*display: block;*/
 	width: 100%;
     height: 95px;
@@ -67,29 +67,22 @@ footer {
     padding: 10px 90px 0;
 }
 
-#index {
-	/*border: 1px solid;*/
-	display: flex;
+footer {
+	border: 1px solid;
+   	display: flex;
+    justify-content: space-between;
 	width: 100%;
-    height: 100%;
+    height: 95px;
+    /*position: relative;*/
     min-width: 955px;
     max-width: 1600px;
     margin: 0 auto;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px 90px 0;
 }
 
-#search {
-	/*border: 1px solid;*/
-	margin: 70px 100px 60px -300px;
-    padding: 0 30px 0 0px;
-}
-
-#ul-1 {
-	/*border: 1px solid;*/
-	margin: 0 auto;
-	padding: 50px;
-}
-
-#searchKeyword::placeholder { color: #aaaaaa; }
+/*#searchKeyword::placeholder { color: #aaaaaa; }
 #searchKeyword:focus { outline: none; }
 
 #searchKeyword:focus ~ label, #searchKeyword:valid ~ label {
@@ -101,7 +94,7 @@ footer {
 
 #searchKeyword:focus ~ span, #searchKeyword:valid ~ span {
   width: 100%;
-}
+}*/
 
 
 

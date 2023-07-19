@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>회원가입 페이지</title>
 <link rel="stylesheet" href="resources/css/signUp.css">
 </head>
 <body>
@@ -59,7 +59,7 @@
 				</tr>
 			</table>
 				 -->
-			<button id="btn">등록</button>
+			<button id="btn">회원가입</button>
 		</form>
 </body>
 </html>

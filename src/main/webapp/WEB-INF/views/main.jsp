@@ -15,8 +15,10 @@
 			<h1><a href="http://localhost/project/">AnyTime</a></h1>
 			<div id="search">
 				<form action="">
-					<input id="searchKeyword" type="text" placeholder="검색어를 입력하세요." autocomplete="off">
-					<button>검색</button>
+					<div>
+						<input id="searchKeyword" type="text" placeholder="검색어를 입력하세요." autocomplete="off">
+						<button>검색</button>
+					</div>
 				</form>
 			</div>	
 			<nav id="member">
@@ -41,7 +43,7 @@
     	본문 내용
     </div>
     <footer>
-        <div>하단의 내용</div>
+        <div id="foot">하단의 내용</div>
     </footer>
 </body>
 </html>
