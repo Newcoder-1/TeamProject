@@ -4,6 +4,5 @@ import java.util.List;
 
 public interface SignUpMapper {
 	public abstract int regMember(SignUp s);
-	
 	public abstract List<SignUp> getAllSignUp();
 }

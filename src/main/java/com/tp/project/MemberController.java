@@ -26,7 +26,7 @@ public class MemberController {
 		sDAO.regMember(s, req);
 		sDAO.getAllSignUp(req);
 		
-		return "redirect:/signUp.do";
+		return "signUp";
 	}
 	// 로그인 페이지로 이동
 	@RequestMapping(value = "/signIn.do", method = RequestMethod.GET )
