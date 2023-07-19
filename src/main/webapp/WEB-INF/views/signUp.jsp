@@ -33,11 +33,11 @@
    	<div id="index">
        	<ul class="ul-1">
            	<li class="li-1"><a href="Ballad.do">Ballad</a></li>
-           	<li class="li-1"><a href="">Classic</a></li>
-           	<li class="li-1"><a href="">Rock</a></li>
-           	<li class="li-1"><a href="">R&B</a></li>
-           	<li class="li-1"><a href="">Jazz</a></li>
-           	<li class="li-1"><a href="">J-POP</a></li>
+           	<li class="li-1"><a href="Classic.do">Classic</a></li>
+           	<li class="li-1"><a href="Rock.do">Rock</a></li>
+           	<li class="li-1"><a href="R&B.do">R&B</a></li>
+           	<li class="li-1"><a href="Jazz.do">Jazz</a></li>
+           	<li class="li-1"><a href="J-POP.do">J-POP</a></li>
         </ul>
    	</div>
     <div id="contents">

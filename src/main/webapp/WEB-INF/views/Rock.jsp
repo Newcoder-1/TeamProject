@@ -41,7 +41,7 @@
    	</div>
     <div id="contents">
     	
-    	발라드
+    	Rock
     	
     	
     	
