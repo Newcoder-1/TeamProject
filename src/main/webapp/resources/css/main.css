@@ -21,7 +21,6 @@ a {
     height: 95px;
 	display: flex;
     justify-content: space-between;
-    /*position: relative;*/
     min-width: 955px;
     max-width: 1600px;
     margin: 0 auto;
@@ -66,7 +65,7 @@ a {
     /*position: relative;*/
     min-width: 955px;
     max-width: 1600px;
-    min-height: 700px;
+    min-height: 900px;
     margin: 0 auto;
     align-items: center;
     box-sizing: border-box;
@@ -86,6 +85,26 @@ footer {
     align-items: center;
     box-sizing: border-box;
     padding: 10px 90px 0;
+}
+
+footer a {
+  display: inline-block;
+  margin: 0 20px 10px 20px;
+  color: black; 
+  font-size: 21px;
+}
+
+footer a:visited {
+  color: black;
+}
+
+footer p {
+  margin-top: 0; margin-bottom: 0;   
+}
+
+footer p span {
+  display: inline-block;
+  margin-left: 17px;
 }
 
 /*#searchKeyword::placeholder { color: #aaaaaa; }

@@ -53,7 +53,15 @@
       	</form>
     </div>
     <footer>
-        <div id="foot">하단의 내용</div>
+    	<nav>
+            <a href="http://localhost/project/">AnyTime</a> |
+            <a href="https://github.com/Newcoder-1/TeamProject" >Github</a>
+        </nav>
+        <p>
+            <span>4팀 : EveryTime</span><br/>
+            <span>팀원 : 박종훈. 김상휘. 한건희</span><br/>
+            <span>Copyright 2023. AnyTime. All Rights Reserved.</span>
+        </p>
     </footer>
 </body>
 </html>
