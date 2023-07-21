@@ -17,8 +17,10 @@
 			<div id="search">
 				<form action="">
 					<div>
-						<input id="searchKeyword" type="text" placeholder="검색어를 입력하세요." autocomplete="off">
+						<input id="searchBox" type="text" placeholder="Search" autocomplete="off">
+						<!--  
 						<button>검색</button>
+						-->
 					</div>
 				</form>
 			</div>	
