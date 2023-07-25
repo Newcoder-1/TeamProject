@@ -15,13 +15,25 @@
 						-->
 					</div>
 				</form>
-			</div>	
+			</div>
+			
+			<c:if test="${empty mvo }">
 			<nav id="member">
 				<ul class="ul-1">
 					<li class="li-1"><a href="signIn.do">로그인</a></li>
 					<li class="li-1"><a href="signUp.do">회원가입</a></li>
 				</ul>
 			</nav>
+			</c:if>	 
+			<c:if test="${!empty mvo }">
+			<nav id="member">
+				<ul class="ul-1">
+					<li class="li-1"><a href="">정보수정</a></li>
+					<li class="li-1"><a href="logOut.do">로그아웃</a></li>
+				</ul>
+			</nav>
+			</c:if>	 
+			
 		</div>
 	</header>
    	<div id="index">
