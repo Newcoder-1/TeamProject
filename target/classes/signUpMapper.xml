@@ -8,4 +8,12 @@
 	<select id="getAllSignUp" resultType="com.tp.project.signUp.SignUp">
 		select * from member order by m_no
 	</select>
-</mapper>
+	<!-- 
+	<select id="registerCheck" resultType="com.tp.project.signUp.SignUp">
+		select * from member where m_id=#{m_id}
+	</select>
+	 -->
+	 <select id="memLogIn" resultType="com.tp.project.signUp.SignUp">
+	 	select * from member where m_id=#{m_id} and m_pw=#{m_pw}
+	 </select>
+</mapper> 

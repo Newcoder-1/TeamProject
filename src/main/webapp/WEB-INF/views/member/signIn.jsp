@@ -11,9 +11,9 @@
 <link rel="stylesheet" href="resources/css/signIn.css">
 </head>
 <body>
-<jsp:include page="common/header.jsp"></jsp:include>
+<jsp:include page="../common/header.jsp"></jsp:include>
     <div id="contents">
-    	<form action="" method="post" id="LogInForm">
+    	<form action="logIn.do" method="post" id="LogInForm">
 		<h2>로그인</h2>
 			<div class="textForm">
        			<input name="m_id" type="text" id="m_id" placeholder="아이디를 입력하세요" autocomplete="off">
@@ -24,6 +24,6 @@
       		<button id="btn">로그인</button>
       	</form>
     </div>
-<jsp:include page="common/footer.jsp"></jsp:include>
+<jsp:include page="../common/footer.jsp"></jsp:include>
 </body>
 </html>
