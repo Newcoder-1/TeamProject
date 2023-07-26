@@ -12,7 +12,10 @@
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
     <div id="contents">
-    	최근 등록한 음원
+		<div id="song">
+			<div>1</div>
+			<div>1</div>
+		</div>
     </div>
 <jsp:include page="common/footer.jsp"></jsp:include>
 </body>

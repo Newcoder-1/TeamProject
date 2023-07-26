@@ -50,15 +50,9 @@ public class MemberController {
 	
 	// 로그인
 	@RequestMapping(value = "logIn.do", method = RequestMethod.POST)
-	public String login(SignUp s, HttpServletRequest req, HttpSession session) {
-		sDAO.memLogIn(s, req, session);
-		
-		if (s == null) {
-			session.setAttribute("logOn", null);
-		} else {
-			session.setAttribute("logOn", s);
-		}
-		
+	public String login(SignUp sl, HttpServletRequest req, HttpSession session) {
+		sDAO.memLogIn(sl, req, session);
+		sDAO.getAllSignUp(req);
 		return "redirect:/";
 	}
 	

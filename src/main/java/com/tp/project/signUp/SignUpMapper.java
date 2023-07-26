@@ -5,5 +5,5 @@ import java.util.List;
 public interface SignUpMapper {
 	public abstract int regMember(SignUp s);	// 회원등록
 	public abstract List<SignUp> getAllSignUp();
-	public abstract int memLogIn(SignUp s);
+	public abstract SignUp memLogIn(SignUp sl);
 }

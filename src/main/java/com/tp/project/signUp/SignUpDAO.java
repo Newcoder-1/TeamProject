@@ -16,6 +16,7 @@ public class SignUpDAO {
 	@Autowired
 	private SqlSession ss;
 	
+	
 	public void regMember(SignUp s, HttpServletRequest req, HttpSession session) {
 		try {
 			SignUpMapper sm = ss.getMapper(SignUpMapper.class);
@@ -37,15 +38,16 @@ public class SignUpDAO {
 		}
 	}
 	
-	public void memLogIn(SignUp s, HttpServletRequest req, HttpSession session) {
+	public void memLogIn(SignUp sl, HttpServletRequest req, HttpSession session) {
 		try {
 			SignUpMapper sm = ss.getMapper(SignUpMapper.class);
 			
-			if (sm.memLogIn(s) == 1) {
-				session.setAttribute("logIn", s);
-			}
+			SignUp signUp = sm.memLogIn(sl); 
+			if (signUp.getM_no() != null) {
+			session.setAttribute("mvo", sl);
+			} 
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 	
