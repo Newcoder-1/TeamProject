@@ -12,7 +12,6 @@
 <script type="text/javascript" src="resources/jQuery.js"></script>
 <script type="text/javascript">
 
-
 	
 </script>
 </head>
@@ -24,7 +23,7 @@
 			<div class="textForm">
        			<input name="m_id" type="text" id="m_id" placeholder="아이디" autocomplete="off">
       		</div>
-      		<div><button type="button" onclick="registerCheck()">중복확인</button></div>
+      	
 			<div class="textForm">
        			<input name="m_pw" type="text" id="m_pw" placeholder="비밀번호" autocomplete="off" onkeyup="passwordCheck()">
       		</div>

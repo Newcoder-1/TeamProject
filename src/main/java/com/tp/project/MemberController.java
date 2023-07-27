@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.tp.project.signUp.SignUp;
@@ -17,9 +19,7 @@ import com.tp.project.signUp.SignUpMapper;
 public class MemberController {
 	
 	@Autowired 
-	SignUpDAO sDAO;
-	SignUpMapper signUpMApper;
-	
+	SignUpDAO sDAO;	
 	
 	// 회원가입 페이지로 이동
 	@RequestMapping(value = "/signUp.do", method = RequestMethod.GET)
@@ -49,21 +49,14 @@ public class MemberController {
 	}
 	
 	// 로그인
-	@RequestMapping(value = "logIn.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/logIn.do", method = RequestMethod.POST)
 	public String login(SignUp sl, HttpServletRequest req, HttpSession session) {
 		sDAO.memLogIn(sl, req, session);
 		sDAO.getAllSignUp(req);
 		return "redirect:/";
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }
 

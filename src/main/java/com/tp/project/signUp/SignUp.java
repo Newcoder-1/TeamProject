@@ -2,6 +2,7 @@ package com.tp.project.signUp;
 
 import java.math.BigDecimal;
 
+import org.springframework.stereotype.Repository;
 public class SignUp {
 	private BigDecimal m_no;
 	private String m_id;
