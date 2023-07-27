@@ -50,6 +50,18 @@ public class SignUpDAO {
 			e.printStackTrace();
 		}
 	}
-	
+
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
