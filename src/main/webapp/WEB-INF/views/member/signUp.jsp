@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/signUp.css">
 <script type="text/javascript" src="resources/jQuery.js"></script>
+<script type="text/javascript" src="resources/js/ValidChecker.js"></script>
 <script type="text/javascript">
 
 	
@@ -22,6 +23,7 @@
 		<h2>회원가입</h2>
 			<div class="textForm">
        			<input name="m_id" type="text" id="m_id" placeholder="아이디" autocomplete="off">
+	       		<button name="id_overlab_button" type="button" id="id_overlab_button" onclick="registerCheckFunction();">중복확인</button>
       		</div>
       	
 			<div class="textForm">
@@ -34,10 +36,10 @@
        			<input name="m_name" type="text" id="m_name" placeholder="이름" autocomplete="off">
       		</div>
 			<div class="textForm">
-       			<input name="m_birth" type="text" id="m_birth" placeholder="생일" autocomplete="off">
+       			<input name="m_birth" type="text" id="m_birth" placeholder="생년월일" autocomplete="off">
       		</div>
 			<div class="textForm">
-       			<input name="m_phone" type="text" id="m_phone" placeholder="번호" autocomplete="off">
+       			<input name="m_phone" type="text" id="m_phone" placeholder="전화번호" autocomplete="off">
       		</div>
 			<div class="textForm">
        			<input name="m_email" type="text" id="m_email" placeholder="이메일" autocomplete="off">
