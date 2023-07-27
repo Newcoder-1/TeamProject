@@ -28,8 +28,8 @@
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<beans:property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
 		<beans:property name="url"
-			value="jdbc:oracle:thin:@192.168.0.62:1521:xe" />
-		<beans:property name="username" value="pjh" />
+			value="jdbc:oracle:thin:@192.168.0.5:1521:xe" />
+		<beans:property name="username" value="hendel" />
 		<beans:property name="password" value="1" />
 	</beans:bean>
 
@@ -44,6 +44,7 @@
 		<beans:property name="mapperLocations">
 			<beans:list>
 				<beans:value>classpath:signUpMapper.xml</beans:value>
+				<beans:value>classpath:musicMapper.xml</beans:value>
 			</beans:list>
 		</beans:property>
 	</beans:bean>

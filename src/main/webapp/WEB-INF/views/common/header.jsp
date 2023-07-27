@@ -7,9 +7,9 @@
 		<div id="main">
 			<h1><a href="${contextPath }">AnyTime</a></h1>
 			<div id="search">
-				<form action="">
+				<form action="search.do">
 					<div>
-						<input id="searchBox" type="text" placeholder="Search" autocomplete="off">
+						<input id="searchBox" name="word" type="text" placeholder="Search" autocomplete="off">
 						<!--  
 						<button>검색</button>
 						-->
