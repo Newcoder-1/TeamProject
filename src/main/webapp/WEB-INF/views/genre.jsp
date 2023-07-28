@@ -12,37 +12,12 @@
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
     <div id="contents">
-    	
-    	발라드
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+    	<c:forEach var="m" items="${musics}">
+			제목 : ${m.s_title}		
+			가수 : ${m.s_artist}
+			발매일 : <fmt:formatDate value="${m.s_date}" pattern="YYYY-MM-dd"/>
+			<br>
+		</c:forEach>
     	
     </div>
 <jsp:include page="common/footer.jsp"></jsp:include>
