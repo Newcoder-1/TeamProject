@@ -66,6 +66,19 @@
     <artifactId>cos</artifactId>
     <version>2022.2</version>
 </dependency>
+<dependency>
+	<groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.28</version>
+    <scope>provided</scope>
+</dependency>
+	
+	<!-- FileUpload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.4</version>
+		</dependency>
 	
 		<!-- Spring -->
 		<dependency>

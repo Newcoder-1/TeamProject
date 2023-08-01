@@ -46,5 +46,5 @@
            	<li class="li-1"><a href="genre.do?s_genre=OST">OST</a></li>
         </ul>
    	</div>
-   	
+   	<div id="regS"><a href="regMusic.go">음악등록</a></div>
    	

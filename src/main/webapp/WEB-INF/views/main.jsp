@@ -8,6 +8,7 @@
 <meta charset="UTF-8">
 <title>메인 페이지</title>
 <link rel="stylesheet" href="resources/css/main.css">
+<link rel="stylesheet" href="resources/css/test.css">
 </head>
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
