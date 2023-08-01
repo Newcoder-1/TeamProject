@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tp.project.music.MusicMapper">
+	<select id="searchMusic" resultType="com.tp.project.music.Music">
+		select * from music where
+			s_title like '%' || #{word} || '%'
+			or s_artist like '%' || #{word} || '%'
+	</select>
+	
+	<select id="mainMusic" resultType="com.tp.project.music.Music">
+		select * from(
+         select * from music order by s_no desc
+      ) where rownum between 1 and 10
+	</select>
+	
+	<select id="genreMusic" resultType="com.tp.project.music.Music">
+		select * from music where s_genre = #{s_genre}
+	</select>
+	
+	<select id="getListPaging" resultType="com.tp.project.music.Music">
+	<![CDATA[
+		select * from (
+		select rownum rn, s_no, s_title, s_artist, s_genre, s_date from music where s_no > 0 and rownum > 0 and rownum <= (2 * 10)) 
+		where rn > (2-1) * 10
+	]]>
+	</select>
+</mapper>

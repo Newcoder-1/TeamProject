@@ -7,9 +7,9 @@
 		<div id="main">
 			<h1><a href="${contextPath }">AnyTime</a></h1>
 			<div id="search">
-				<form action="">
+				<form action="search.do">
 					<div>
-						<input id="searchBox" type="text" placeholder="Search" autocomplete="off">
+						<input id="searchBox" name="word" type="text" placeholder="Search" autocomplete="off">
 						<!--  
 						<button>검색</button>
 						-->
@@ -38,11 +38,13 @@
 	</header>
    	<div id="index">
        	<ul class="ul-1">
-           	<li class="li-1"><a href="Ballad.do">Ballad</a></li>
-           	<li class="li-1"><a href="">Classic</a></li>
-           	<li class="li-1"><a href="">Rock</a></li>
-           	<li class="li-1"><a href="">R&B</a></li>
-           	<li class="li-1"><a href="">Jazz</a></li>
-           	<li class="li-1"><a href="">J-POP</a></li>
+           	<li class="li-1"><a href="genre.do?s_genre=Ballad">Ballad</a></li>
+           	<li class="li-1"><a href="genre.do?s_genre=HipHop">HipHop</a></li>
+           	<li class="li-1"><a href="genre.do?s_genre=Dance">Dance</a></li>
+           	<li class="li-1"><a href="genre.do?s_genre=Rock">Rock</a></li>
+           	<li class="li-1"><a href="genre.do?s_genre=J-POP">J-POP</a></li>
+           	<li class="li-1"><a href="genre.do?s_genre=OST">OST</a></li>
         </ul>
    	</div>
+   	
+   	
