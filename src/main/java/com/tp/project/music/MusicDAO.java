@@ -21,14 +21,19 @@ public class MusicDAO {
 	@Autowired
 	private SqlSession ss;
 	
-	public void searchMusic(String word, HttpServletRequest req) {
-		try {
-			List<Music> musics = ss.getMapper(MusicMapper.class).searchMusic(word);
-			req.setAttribute("musics", musics);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//	public void searchMusic(String word, HttpServletRequest req) {
+//		try {
+//			List<Music> musics = ss.getMapper(MusicMapper.class).searchMusic(word);
+//			req.setAttribute("musics", musics);
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+	
+	// 음악 검색
+	public Musics searchMusic(String word, HttpServletRequest req) {
+		return new Musics(ss.getMapper(MusicMapper.class).searchMusic(word));
 	}
 	
 	public void mainMusic(HttpServletRequest req) {
@@ -53,7 +58,7 @@ public class MusicDAO {
 	public void regMusic(Music m, HttpServletRequest req) {
 		try {
 			String date_String = m.getS_date_String();
-			SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd");
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
 			Date s_date = sdf.parse(date_String);
 			m.setS_date(s_date);
 			
@@ -65,6 +70,22 @@ public class MusicDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	// 음악게시판 db 개수 리턴
+	public int searchMusicCount(HttpServletRequest req, String word) {
+		return ss.getMapper(MusicMapper.class).searchMusicCount(word);
+	}
+	
+	// 음악게시판 페이지 수  리턴
+	public int searchMusicPageCount(HttpServletRequest req, String word) {
+		int count = searchMusicCount(req, word);
+		int pageCount = 0;
+		int numPerPage = 10; // 페이지당 보여줄 항목 수
+		pageCount = count / numPerPage;
+		if (count % numPerPage != 0)
+			pageCount++;
+		return pageCount;
 	}
 }
 

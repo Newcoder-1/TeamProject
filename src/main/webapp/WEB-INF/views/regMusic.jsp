@@ -15,13 +15,12 @@
     	<form action="regMusic.do" method="post" enctype="multipart/form-data" id="">
 		<h2>음악등록</h2>
 			<div class="textForm">
-       			곡명<input name="s_title" type="text" id="s_title" placeholder="제목" autocomplete="off">
+       			<input name="s_title" type="text" id="s_title" placeholder="제목" autocomplete="off">
       		</div>
 			<div class="textForm">
-       			가수<input name="s_artist" type="text" id="s_artist" placeholder="가수" autocomplete="off">
+       			<input name="s_artist" type="text" id="s_artist" placeholder="가수" autocomplete="off">
       		</div>
 			<div class="textForm">
-				장르
        			<select name="s_genre" id="s_genre">
        				<option value="J-POP">J-POP</option>
        				<option value="Ballad">Ballad</option>
@@ -32,13 +31,12 @@
        			</select>
       		</div>
 			<div class="textForm">
-       			발매일<input name="s_date_String" type="text" id="s_date" placeholder="숫자만입력해주세요" autocomplete="off">
+       			<input name="s_date_String" type="text" id="s_date" placeholder="발매일" autocomplete="off">
       		</div>
 			<div class="textForm">
-       			앨범<input name="s_album_file" type="file" id="s_album_file" autocomplete="off">
+       			<input name="s_album_file" type="file" id="s_album_file" placeholder="사진" autocomplete="off">
       		</div>
 			<div class="textForm">
-       			가사
        			<textarea name="s_lyrics" rows="20" id="s_lyrics" placeholder="가사" autocomplete="off">
        			</textarea>
       		</div>

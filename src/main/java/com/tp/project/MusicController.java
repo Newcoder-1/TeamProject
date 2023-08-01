@@ -8,10 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.tp.project.music.Music;
 import com.tp.project.music.MusicDAO;
+import com.tp.project.music.Musics;
 
 import java.io.File;
 import java.time.LocalDate;
@@ -21,10 +23,22 @@ public class MusicController {
 
 	@Autowired MusicDAO mDAO;
 	
+	// 검색된 음악 JSON
+	@RequestMapping(value = "/search.doJSON", method = RequestMethod.GET, produces = "application/json; charset=UTF-8")
+	public @ResponseBody Musics searchMusicJSON(String word, HttpServletRequest req) {
+		return mDAO.searchMusic(word, req);
+	}
+	
 	// 검색
 	@RequestMapping(value = "/search.do", method = RequestMethod.GET )
 	public String searchMusic(String word, HttpServletRequest req) {
 		mDAO.searchMusic(word, req);
+		req.setAttribute("myWord", word);
+		int count = mDAO.searchMusicCount(req, word);
+		int pageNum = mDAO.searchMusicPageCount(req, word);
+		req.setAttribute("count", count);
+		req.setAttribute("pageNum", pageNum);
+		req.setAttribute("page", 1);
 		return "searchMain";
 	}
 	// 장르별
@@ -47,8 +61,8 @@ public class MusicController {
 				String uploadPath = "C:/Users/USER/Desktop/TeamProject2/TeamProject/src/main/webapp/resources/album/";
 				String fileName = albumFile.getOriginalFilename();
 				String realPath = uploadPath + fileName;
-				m.setS_album(realPath);
-				System.out.println(realPath);
+				albumFile.transferTo(new File(realPath));
+				m.setS_album(fileName);
 			} catch (Exception e) {
 				e.printStackTrace();
 				return "regMusic";
@@ -58,4 +72,5 @@ public class MusicController {
 		mDAO.regMusic(m, req);
 		return "regMusic";
 	}
+	
 }

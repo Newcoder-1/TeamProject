@@ -4,7 +4,7 @@
 	<select id="searchMusic" resultType="com.tp.project.music.Music">
 		select * from music where
 			s_title like '%' || #{word} || '%'
-			or s_artist like '%' || #{word} || '%'
+			or s_artist like '%' || #{word} || '%' order by s_title
 	</select>
 	
 	<select id="mainMusic" resultType="com.tp.project.music.Music">
@@ -22,4 +22,16 @@
 		insert into music values(
 		music_seq.nextval, #{s_title}, #{s_artist}, #{s_genre}, #{s_date}, #{s_album}, #{s_lyrics})
 	</insert>
+	
+	<!-- 음악 개수 구하기 --> 
+	<select id="getMusicCount" resultType = "int">
+		select count(*) from music
+	</select>
+	
+	<!-- 검색한 음악 개수 구하기 -->
+	<select id="searchMusicCount" resultType="int">
+		select count(*) from music where
+			s_title like '%' || #{word} || '%'
+			or s_artist like '%' || #{word} || '%'
+	</select>
 </mapper>
