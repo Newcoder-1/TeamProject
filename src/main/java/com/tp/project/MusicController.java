@@ -57,8 +57,10 @@ public class MusicController {
 	
 	@RequestMapping(value = "/genre.do", method = RequestMethod.GET )
 	public String genreMusic(String s_genre, HttpServletRequest req) {
-		int count = mDAO.genreMusicCount(s_genre);
-		int pageNum = mDAO.genreMusicPageCount(s_genre);
+		mDAO.genreMusic(s_genre, req);
+		req.setAttribute("genre", s_genre);
+		int count = mDAO.genreMusicCount(req, s_genre);
+		int pageNum = mDAO.genreMusicPageCount(req, s_genre);
 		req.setAttribute("count", count);
 		req.setAttribute("pageNum", pageNum);
 		req.setAttribute("page", 1);
@@ -90,5 +92,12 @@ public class MusicController {
 		mDAO.regMusic(m, req);
 		return "regMusic";
 	}
+	
+	// 상세정보 이동 & 상세정보 불러오기
+		@RequestMapping(value = "/detailMusic.go", method = RequestMethod.GET )
+		public String detailMusic(String s_no, HttpServletRequest req) {
+			mDAO.detailMusic(req, s_no);
+			return "detailMusic";
+		}
 	
 }

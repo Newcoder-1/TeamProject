@@ -5,19 +5,17 @@
 		insert into member values(
 		member_seq.nextval, #{m_id}, #{m_pw}, #{m_name}, #{m_birth}, #{m_phone}, #{m_email}, #{m_gender})
 	</insert>
-	
 	<select id="getAllSignUp" resultType="com.tp.project.signUp.SignUp">
 		select * from member order by m_no
 	</select>
-	 
-	<select id="memLogIn" resultType="com.tp.project.signUp.SignUp">
+
+	 <select id="memLogIn" resultType="com.tp.project.signUp.SignUp">
 	 	select * from member where m_id=#{m_id} and m_pw=#{m_pw}
-	</select>
-	
-	<!-- 
-	<select id="registerCheck" resultType="com.tp.project.signUp.SignUp">
-		select * from member where m_id=#{m_id}
-	</select>
-	 --> 
+	 </select>
+	 
+	 <update id="updateMember" parameterType="com.tp.project.signUp.SignUp">
+	 	update member set m_pw = #{m_pw}, m_phone = #{m_phone}, m_email = #{m_email}, m_name = #{m_name}
+	 	where m_id = #{m_id}
+	 </update>
 	 
 </mapper> 

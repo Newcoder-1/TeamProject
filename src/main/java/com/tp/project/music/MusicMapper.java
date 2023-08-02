@@ -14,4 +14,6 @@ public interface MusicMapper {
 	public abstract int regMusic(Music m);
 	
 	public abstract int getMusicCount();
+	
+	public abstract List<Music> detailMusic(String s_no);
 }

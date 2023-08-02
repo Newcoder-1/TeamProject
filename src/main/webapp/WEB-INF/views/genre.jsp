@@ -11,9 +11,35 @@
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/searchMain.css">
 <script type="text/javascript" src="resources/jQuery.js"></script>
+<style>
+    /* 이미지 스타일 */
+    img {
+        margin: 10px; /* 여백 */
+    }
+
+    /* 테이블 셀 스타일 */
+    #contents table {
+        border-collapse: collapse; /* 테이블 셀 경계가 서로 겹치도록 설정 */
+        width: 80%; /* 테이블 폭을 100%로 설정 */
+    }
+
+    #stable th, td {
+        padding: 10px; /* 셀 내부 여백 */
+        text-align: center; /* 셀 내용 가운데 정렬 */
+    }
+
+    #stable th {
+        background-color: #f2f2f2; /* 테이블 헤더 배경색 */
+    }
+
+    #stable td {
+        background-color: #fff; /* 테이블 셀 배경색 */
+        color: #333; /* 글자색 */
+    }
+</style>
 <script type="text/javascript">
 	$(function() {
-		let word = getParameterByName("s_genre");
+		let s_genre = getParameterByName("s_genre");
 		$.getJSON("genre.doJSON?s_genre=" + s_genre,  function(abc2) {
 			let page = parseInt(getParameterByName("page")) || 1;
 			$.each(abc2.music, function(i, e) {
@@ -27,8 +53,9 @@
                     let td2 = $("<td></td>").text(e.s_title);
                     let td3 = $("<td></td>").text(e.s_artist);
                     let td4 = $("<td></td>").text(formatDate(e.s_date)); // 날짜 형식 변환
+                    let td5 = $("<td></td>").append($("<a>").attr("href", "detailMusic.go?s_no=" + e.s_no).text("상세 보기"));
 
-                    let tr = $("<tr></tr>").append(td1, td2, td3, td4);
+                    let tr = $("<tr></tr>").append(td1, td2, td3, td4, td5);
                 
 				$("#stable").append(tr);
 				}
@@ -60,8 +87,12 @@
 </head>
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
+	<!-- 
+	<div>전체 개수 : ${count } 페이지 수 : ${pageNum } 현재 페이지 : ${page } 내 검색어 : ${myWord }</div>
+	 -->
+    
     <div id="contents">
-    	<table id="stable" border="1">
+    	<table id="stable" border="0">
     		<colgroup>
     			<col width="50px">
     			<col width="250px">
@@ -75,31 +106,21 @@
     				<th class="th1">곡</th>
     				<th class="th1">아티스트</th>
     				<th class="th1">발매일</th>
+    				<th class="th1">더보기</th>
     			</tr>
     		</thead>
-    		<!-- 
-    		<c:forEach var="m" items="${musics}">
-    		<tbody>
-    			<tr id="tbtr" align="center">
-    				<td><img src="${path}/resources/album/${m.s_album}" width="100" height="100"></td>
-    				<td class="th2">${m.s_title}</td>
-    				<td class="th2">${m.s_artist}</td>
-    				<td class="th2"><fmt:formatDate value="${m.s_date}" pattern="YYYY-MM-dd"/></td>
-    			</tr>
-    		</tbody>
-    		</c:forEach>    	
-    		 -->
     	</table>
     </div>
-    <div id="pageDiv">
-		<table id="paging" class="searchpaging" border="1">
-			<tr>
-				<c:forEach var="i" begin="1" end="${pageNum }" step="1">
-					<td><a href="search.do?word=${myWord }&page=${i }">${i }</a></td>
-				</c:forEach>
-			</tr>
-		</table>
-	</div>
+    	
+	    <div id="pageDiv">
+			<table id="paging" class="searchpaging" border="0">
+				<tr>
+					<c:forEach var="i" begin="1" end="${pageNum }" step="1">
+						<td><a href="genre.do?s_genre=${genre }&page=${i }">${i }</a></td>
+					</c:forEach>
+				</tr>
+			</table>
+		</div>
 <jsp:include page="common/footer.jsp"></jsp:include>
 </body>
 </html>

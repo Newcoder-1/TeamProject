@@ -93,7 +93,7 @@ public class MusicDAO {
 		return ss.getMapper(MusicMapper.class).searchMusicCount(word);
 	}
 	
-	public int getMusicCount(HttpServletRequest req, String s_genre) {
+	public int genreMusicCount(HttpServletRequest req, String s_genre) {
 		return ss.getMapper(MusicMapper.class).genreMusicCount(s_genre);
 	}
 	
@@ -108,8 +108,8 @@ public class MusicDAO {
 		return pageCount;
 	}
 	
-	public int genreMusicPageCount(String s_genre) {
-		int count = genreMusicCount(s_genre);
+	public int genreMusicPageCount(HttpServletRequest req, String s_genre) {
+		int count = genreMusicCount(req, s_genre);
 		int pageCount = 0;
 		int numPerPage = 10; // 페이지당 보여줄 항목 수
 		pageCount = count / numPerPage;
@@ -117,6 +117,16 @@ public class MusicDAO {
 			pageCount++;
 		return pageCount;
 	}
+	
+	// 음악 상세정보 불러오기
+		public void detailMusic(HttpServletRequest req, String s_no) {
+			try {
+				List<Music> details = ss.getMapper(MusicMapper.class).detailMusic(s_no);
+				req.setAttribute("details", details);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 
 }
 

@@ -16,13 +16,14 @@ public class Music {
 	private String s_album;
 	private MultipartFile s_album_file;
 	private String s_lyrics;
+	private String s_embed;
 	
 	public Music() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public Music(BigDecimal s_no, String s_title, String s_artist, String s_genre, String s_date_String, Date s_date,
-			String s_album, MultipartFile s_album_file, String s_lyrics) {
+			String s_album, MultipartFile s_album_file, String s_lyrics, String s_embed) {
 		super();
 		this.s_no = s_no;
 		this.s_title = s_title;
@@ -33,6 +34,7 @@ public class Music {
 		this.s_album = s_album;
 		this.s_album_file = s_album_file;
 		this.s_lyrics = s_lyrics;
+		this.s_embed = s_embed;
 	}
 
 	public BigDecimal getS_no() {
@@ -105,6 +107,14 @@ public class Music {
 
 	public void setS_lyrics(String s_lyrics) {
 		this.s_lyrics = s_lyrics;
+	}
+
+	public String getS_embed() {
+		return s_embed;
+	}
+
+	public void setS_embed(String s_embed) {
+		this.s_embed = s_embed;
 	}
 	
 }

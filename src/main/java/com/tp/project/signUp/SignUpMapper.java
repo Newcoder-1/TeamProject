@@ -6,4 +6,6 @@ public interface SignUpMapper {
 	public abstract int regMember(SignUp s);	// 회원등록
 	public abstract List<SignUp> getAllSignUp();
 	public abstract SignUp memLogIn(SignUp sl);
+	public abstract int updateMember(SignUp s);
+	
 }
