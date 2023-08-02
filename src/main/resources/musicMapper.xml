@@ -4,24 +4,34 @@
 	<select id="searchMusic" resultType="com.tp.project.music.Music">
 		select * from music where
 			s_title like '%' || #{word} || '%'
-			or s_artist like '%' || #{word} || '%'
+			or s_artist like '%' || #{word} || '%' order by s_title
 	</select>
 	
 	<select id="mainMusic" resultType="com.tp.project.music.Music">
 		select * from(
-         select * from music order by s_no desc
-      ) where rownum between 1 and 10
+			select * from music order by s_no desc
+		)
+		where rownum between 1 and 10
 	</select>
 	
 	<select id="genreMusic" resultType="com.tp.project.music.Music">
 		select * from music where s_genre = #{s_genre}
 	</select>
 	
-	<select id="getListPaging" resultType="com.tp.project.music.Music">
-	<![CDATA[
-		select * from (
-		select rownum rn, s_no, s_title, s_artist, s_genre, s_date from music where s_no > 0 and rownum > 0 and rownum <= (2 * 10)) 
-		where rn > (2-1) * 10
-	]]>
+	<insert id="regMusic" parameterType="com.tp.project.music.Music">
+		insert into music values(
+		music_seq.nextval, #{s_title}, #{s_artist}, #{s_genre}, #{s_date}, #{s_album}, #{s_lyrics})
+	</insert>
+	
+	<!-- 음악 개수 구하기 --> 
+	<select id="getMusicCount" resultType = "int">
+		select count(*) from music
+	</select>
+	
+	<!-- 검색한 음악 개수 구하기 -->
+	<select id="searchMusicCount" resultType="int">
+		select count(*) from music where
+			s_title like '%' || #{word} || '%'
+			or s_artist like '%' || #{word} || '%'
 	</select>
 </mapper>
