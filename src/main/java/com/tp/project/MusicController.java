@@ -41,18 +41,37 @@ public class MusicController {
 		req.setAttribute("page", 1);
 		return "searchMain";
 	}
+	
 	// 장르별
+//	@RequestMapping(value = "/genre.do", method = RequestMethod.GET )
+//	public String genreMusic(String s_genre, HttpServletRequest req) {
+//		mDAO.genreMusic(s_genre, req);
+//		return "genre";
+//	}
+	
+	// 장르
+	@RequestMapping(value = "/genre.doJSON", method = RequestMethod.GET, produces = "application/json; charset=UTF-8")
+	public @ResponseBody Musics genreMusicJSON(String s_genre, HttpServletRequest req) {
+		return mDAO.genreMusic(s_genre, req);
+	}
+	
 	@RequestMapping(value = "/genre.do", method = RequestMethod.GET )
 	public String genreMusic(String s_genre, HttpServletRequest req) {
-		mDAO.genreMusic(s_genre, req);
+		int count = mDAO.genreMusicCount(s_genre);
+		int pageNum = mDAO.genreMusicPageCount(s_genre);
+		req.setAttribute("count", count);
+		req.setAttribute("pageNum", pageNum);
+		req.setAttribute("page", 1);
 		return "genre";
 	}
+	
 	// 음악등록 이동
 	@RequestMapping(value = "/regMusic.go", method = RequestMethod.GET )
 	public String goRegMusic(HttpServletRequest req) {
 		
 		return "regMusic";
 	}
+	
 	// 음악등록 실행 
 	@RequestMapping(value = "/regMusic.do", method = RequestMethod.POST )
 	public String regMusic(@RequestParam("s_album_file") MultipartFile albumFile, Music m, HttpServletRequest req) {
@@ -68,7 +87,6 @@ public class MusicController {
 				return "regMusic";
 			}
 		}
-		
 		mDAO.regMusic(m, req);
 		return "regMusic";
 	}

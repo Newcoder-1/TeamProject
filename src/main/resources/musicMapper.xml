@@ -34,4 +34,8 @@
 			s_title like '%' || #{word} || '%'
 			or s_artist like '%' || #{word} || '%'
 	</select>
+	
+	<select id="genreMusicCount" parameterType="String" resultType="int">
+		select count(*) from music where s_genre = #{s_genre}
+	</select>
 </mapper>
