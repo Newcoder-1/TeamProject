@@ -90,7 +90,8 @@ public class MusicController {
 			}
 		}
 		mDAO.regMusic(m, req);
-		return "regMusic";
+		mDAO.mainMusic(req);
+		return "main";
 	}
 	
 	// 상세정보 이동 & 상세정보 불러오기

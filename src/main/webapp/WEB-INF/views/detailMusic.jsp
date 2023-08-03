@@ -10,6 +10,7 @@
 <title>상세 페이지</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/detail.css">
+<link rel="stylesheet" href="resources/css/common.css">
 </head>
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>

@@ -11,7 +11,7 @@
   	margin: 0 auto;
 }
 
-#regMForm {
+#joinForm {
 	display: flex;
 	flex-direction: column;
   	align-items: center; /* #details 내부의 요소들을 세로 중앙으로 정렬 */
@@ -21,7 +21,7 @@
   	text-align: center;
 }
 
-#regMForm h2 {
+#joinForm h2 {
     text-align: center;
     margin: 30px;
 }
@@ -32,11 +32,12 @@
     padding: 10px 10px;
 }
 
-#s_title,
-#s_artist,
-#s_genre,
-#s_date,
-#s_embed {
+#m_id,
+#m_pw,
+#m_pw2,
+#m_name,
+#m_phone,
+#m_email {
     width: 300px;
     border: none;
     outline: none;
@@ -44,25 +45,6 @@
     font-size: 16px;
     height: 25px;
     background: none;
-}
-
-#s_album_file {
-	width: 300px;
-}
-
-#s_lyrics {
-	resize: vertical; /* 수직 방향으로만 크기 조정 가능 */
-    width: 300px;
-    height: 150px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    padding: 5px;
-}
-
-#s_lyrics:focus {
-    outline: none; /* 포커스시 브라우저 기본 하이라이트 제거 */
-    border-color: #81ecec; /* 포커스시 테두리 색 변경 */
-    box-shadow: 0 0 5px #81ecec; /* 포커스시 그림자 효과 추가 */
 }
 
 #btn {

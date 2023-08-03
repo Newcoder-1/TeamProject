@@ -6,9 +6,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>음악 등록 페이지</title>
+<title>음악 등록</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/regMusic.css">
+<link rel="stylesheet" href="resources/css/common.css">
 </head>
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
@@ -38,11 +39,10 @@
        			<input name="s_album_file" type="file" id="s_album_file" placeholder="사진" autocomplete="off">
       		</div>
 			<div class="textForm">
-       			<textarea name="s_lyrics" rows="20" id="s_lyrics" placeholder="가사" autocomplete="off">
-       			</textarea>
+       			<textarea name="s_lyrics" rows="20" id="s_lyrics" placeholder="가사를 입력해주세요!" autocomplete="off"></textarea>
       		</div>
       		<div class="textForm">
-       			<input name="s_embed" type="text" id="s_embed" placeholder="영상" autocomplete="off">
+       			<input name="s_embed" type="text" id="s_embed" placeholder="영상 링크를 적어주세요!" autocomplete="off">
       		</div>
 			<button id="btn">음악등록</button>
 		</form>

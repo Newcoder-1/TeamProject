@@ -1,88 +1,94 @@
-    @charset "UTF-8";
+@charset "UTF-8";
 
-    * {
-        /* margin: 0px;
-        padding: 0px;
-        text-decoration: none; */
-    }
+#contents-container {
+  	display: flex;
+  	justify-content: center;
+  	/*border: 1px solid;*/
+}
 
-    /* body {
-        background-image: #34495e;
-    } */
+#contents {
+ 	max-width: 1200px;
+  	margin: 0 auto;
+}
 
-    #joinForm {
-        position: absolute;
-        /* display: flex; */
-        width: 400px;
-        height: 400px;
-        padding: 30px, 20px;
-        background-color: #FFFFFF;
-        text-align: center;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 15px;
-    }
+#joinForm {
+	display: flex;
+	flex-direction: column;
+  	align-items: center; /* #details 내부의 요소들을 세로 중앙으로 정렬 */
+  	margin-bottom: 20px;
+  	
+  	width: 400px;
+  	text-align: center;
+}
 
-    #joinForm h2 {
-        text-align: center;
-        margin: 30px;
-    }
+#joinForm h2 {
+    text-align: center;
+    margin: 30px;
+}
 
-    .textForm {
-        border-bottom: 2px solid #adadad;
-        margin: 30px;
-        padding: 10px 10px;
-    }
+.textForm {
+    border-bottom: 2px solid #adadad;
+    margin: 20px;
+    padding: 10px 10px;
+}
 
-    #m_id,
-    #m_pw,
-    #m_pw2,
-    #m_name,
-    #m_birth,
-    #m_phone,
-    #m_email,
-    #m_gender {
-        width: 100%;
-        border: none;
-        outline: none;
-        color: #636e72;
-        font-size: 16px;
-        height: 25px;
-        background: none;
-    }
+#m_id,
+#m_pw,
+#m_pw2,
+#m_name,
+#m_birth,
+#m_phone,
+#m_email,
+#m_gender {
+    width: 300px;
+    border: none;
+    outline: none;
+    color: #636e72;
+    font-size: 16px;
+    height: 25px;
+    background: none;
+}
 
-    #btn {
-        position: relative;
-        left: 40%;
-        transform: translateX(-50%);
-        margin-bottom: 40px;
-        width: 80%;
-        height: 40px;
-        background: linear-gradient(125deg, #81ecec, #6c5ce7, #81ecec);
-        background-position: left;
-        background-size: 200%;
-        color: white;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
-        transition: 0.4s;
-        display: inline;
-    }
+#btn {
+    position: relative;
+    left: 40%;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+    width: 80%;
+    height: 40px;
+    background: linear-gradient(125deg, #81ecec, #6c5ce7, #81ecec);
+    background-position: left;
+    background-size: 200%;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    display: inline;
+}
 
-    #btn:hover {
-        background-position: right;
-    }
+#btn:hover {
+    background-position: right;
+}
 
-    #contents {
-        /* border: 1px solid; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-width: 955px;
-        max-width: 1600px;
-        min-height: 850px;
-        margin: 0 auto;
-        box-sizing: border-box;
-        padding: 0 90px 0;
-    }
+#btn2 {
+    position: relative;
+    left: 40%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 40px;
+    background: linear-gradient(125deg, #81ecec, #6c5ce7, #81ecec);
+    background-position: left;
+    background-size: 200%;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+    display: inline;
+}
+
+#btn2:hover {
+    background-position: right;
+}
+

@@ -7,9 +7,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>음악 검색 페이지</title>
+<title>검색 결과</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/searchMain.css">
+<link rel="stylesheet" href="resources/css/common.css">
 <script type="text/javascript" src="resources/jQuery.js"></script>
 <style>
     /* 이미지 스타일 */

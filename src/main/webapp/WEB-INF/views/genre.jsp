@@ -10,6 +10,7 @@
 <title>장르</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/searchMain.css">
+<link rel="stylesheet" href="resources/css/common.css">
 <script type="text/javascript" src="resources/jQuery.js"></script>
 <style>
    /* 이미지 스타일 */
@@ -87,34 +88,30 @@
 </head>
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
-	<!-- 
-	<div>전체 개수 : ${count } 페이지 수 : ${pageNum } 현재 페이지 : ${page } 내 검색어 : ${myWord }</div>
-	 -->
-    
-    <div id="contents">
-    	<table id="stable" border="1">
-    		<colgroup>
-    			<col width="50px">
-    			<col width="250px">
-    			<col width="250px">
-    			<col width="250px">
-    			<col width="100px">
-    		</colgroup>
-    		
-    		<thead>
-    			<tr id="thtr">
-    				<th class="th1">앨범</th>
-    				<th class="th1">곡</th>
-    				<th class="th1">아티스트</th>
-    				<th class="th1">발매일</th>
-    				<th class="th1">더보기</th>
-    			</tr>
-    		</thead>
-    	</table>
-    </div>
+	<div id="contents">
+		<table id="stable" border="0">
+			<colgroup>
+				<col width="50px">
+				<col width="250px">
+				<col width="250px">
+				<col width="250px">
+				<col width="100px">
+			</colgroup>
+			
+			<thead>
+				<tr id="thtr">
+					<th class="th1">앨범</th>
+					<th class="th1">곡</th>
+					<th class="th1">아티스트</th>
+					<th class="th1">발매일</th>
+					<th class="th1">더보기</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
     	
 	    <div id="pageDiv">
-			<table id="paging" class="searchpaging" border="1">
+			<table id="paging" class="searchpaging" border="0">
 				<tr>
 					<c:forEach var="i" begin="1" end="${pageNum }" step="1">
 						<td><a href="genre.do?s_genre=${genre }&page=${i }">${i }</a></td>

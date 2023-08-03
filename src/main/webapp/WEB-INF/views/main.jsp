@@ -10,6 +10,7 @@
 <title>메인 페이지</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/searchMain.css">
+<link rel="stylesheet" href="resources/css/common.css">
 <style>
     /* 이미지 스타일 */
     img {
@@ -42,7 +43,7 @@
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
     <div id="contents">
-    	<table id="stable" border="1">
+    	<table id="stable" border="0">
     		<colgroup>
     			<col width="50px">
     			<col width="250px">
@@ -52,7 +53,7 @@
     		</colgroup>
     		
     		<thead>
-    			<tr id="thtr" border="1">
+    			<tr id="thtr" border="0">
     				<th class="th1">앨범</th>
     				<th class="th1">곡</th>
     				<th class="th1">아티스트</th>

@@ -6,24 +6,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인 페이지</title>
+<title>로그인</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/signIn.css">
+<link rel="stylesheet" href="resources/css/common.css">
 </head>
 <body>
 <jsp:include page="../common/header.jsp"></jsp:include>
-    <div id="contents">
-    	<form action="logIn.do" method="post" id="LogInForm">
-		<h2>로그인</h2>
-			<div class="textForm">
-       			<input name="m_id" type="text" id="m_id" placeholder="아이디를 입력하세요" autocomplete="off">
-      		</div>
-			<div class="textForm">
-       			<input name="m_pw" type="text" id="m_pw" placeholder="비밀번호를 입력하세요" autocomplete="off">
-      		</div>
-      		<button id="btn">로그인</button>
-      	</form>
-    </div>
+	<div id="contents-container">
+	    <div id="contents">
+	        <form action="logIn.do" method="post" id="LogInForm">
+	            <h2>로그인</h2>
+	            <div class="textForm">
+	                <input name="m_id" type="text" id="m_id" placeholder="아이디를 입력하세요" autocomplete="off">
+	            </div>
+	            <div class="textForm">
+	                <input name="m_pw" type="text" id="m_pw" placeholder="비밀번호를 입력하세요" autocomplete="off">
+	            </div>
+	            <button id="btn">로그인</button>
+	        </form>
+	    </div>
+	</div>
 <jsp:include page="../common/footer.jsp"></jsp:include>
 </body>
 </html>

@@ -6,9 +6,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원 정보 수정</title>
+<title>정보 수정</title>
 <link rel="stylesheet" href="resources/css/main.css">
-<link rel="stylesheet" href="resources/css/signUp.css">
+<link rel="stylesheet" href="resources/css/update.css">
+<link rel="stylesheet" href="resources/css/common.css">
 <script type="text/javascript" src="resources/jQuery.js"></script>
 <script type="text/javascript">
 </script>
@@ -17,7 +18,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
     <div id="contents">
     	<form action="updateMember.do" method="post" id="joinForm">
-		<h2>회원가입</h2>
+		<h2>정보 수정</h2>
 			<div class="textForm">
        			<input name="m_id" type="text" id="m_id" placeholder="아이디" autocomplete="off" value="${mvo.m_id}" readonly>
       		</div>
