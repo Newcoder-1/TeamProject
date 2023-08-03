@@ -5,7 +5,7 @@ create table music (
 	s_genre varchar2(20 char) not null,
 	s_date date not null,
 	s_album varchar2(1000 char) null,
-	s_lyrics varchar2(1000 char) null,
+	s_lyrics varchar2(3000 char) null,
 	s_embed varchar2(1000 char) null
 );
 

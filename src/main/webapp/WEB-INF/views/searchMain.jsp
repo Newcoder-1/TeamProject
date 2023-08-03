@@ -7,12 +7,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인 페이지</title>
+<title>음악 검색 페이지</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/searchMain.css">
 <script type="text/javascript" src="resources/jQuery.js"></script>
 <style>
-     /* 이미지 스타일 */
+    /* 이미지 스타일 */
     img {
         margin: 10px; /* 여백 */
     }
@@ -98,6 +98,7 @@
     			<col width="250px">
     			<col width="250px">
     			<col width="250px">
+    			<col width="100px">
     		</colgroup>
     		
     		<thead>

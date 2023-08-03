@@ -13,26 +13,25 @@
 <style>
     /* 이미지 스타일 */
     img {
-        border: 1px solid #ccc; /* 테두리 스타일 */
         margin: 10px; /* 여백 */
     }
 
     /* 테이블 셀 스타일 */
-    table {
+    #contents table {
         border-collapse: collapse; /* 테이블 셀 경계가 서로 겹치도록 설정 */
         width: 80%; /* 테이블 폭을 100%로 설정 */
     }
 
-    th, td {
+    #stable th, td {
         padding: 10px; /* 셀 내부 여백 */
         text-align: center; /* 셀 내용 가운데 정렬 */
     }
 
-    th {
+    #stable th {
         background-color: #f2f2f2; /* 테이블 헤더 배경색 */
     }
 
-    td {
+    #stable td {
         background-color: #fff; /* 테이블 셀 배경색 */
         color: #333; /* 글자색 */
     }
@@ -43,16 +42,17 @@
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
     <div id="contents">
-    	<table id="stable" border="0">
+    	<table id="stable" border="1">
     		<colgroup>
     			<col width="50px">
     			<col width="250px">
     			<col width="250px">
     			<col width="250px">
+    			<col width="100px">
     		</colgroup>
     		
     		<thead>
-    			<tr id="thtr" border>
+    			<tr id="thtr" border="1">
     				<th class="th1">앨범</th>
     				<th class="th1">곡</th>
     				<th class="th1">아티스트</th>
@@ -74,14 +74,8 @@
     		</c:forEach>
     	</table>
     </div>
+    
+    <div></div>
 <jsp:include page="common/footer.jsp"></jsp:include>
 </body>
 </html>
-		<!-- 
-		<c:forEach var="m" items="${musics}">
-			<img src="${path}/resources/album/${m.s_album}" width="100" height="100">
-			제목 : ${m.s_title}		
-			가수 : ${m.s_artist}
-			발매일 : <fmt:formatDate value="${m.s_date}" pattern="YYYY-MM-dd"/>
-		</c:forEach>
-		 -->

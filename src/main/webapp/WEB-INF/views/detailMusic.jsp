@@ -7,22 +7,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인 페이지</title>
+<title>상세 페이지</title>
 <link rel="stylesheet" href="resources/css/main.css">
+<link rel="stylesheet" href="resources/css/detail.css">
 </head>
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
-    <div id="contents">
-    	<c:forEach var="d" items="${details}">
-    		<img src="${path}/resources/album/${d.s_album}" width="100" height="100">
-			제목 : ${d.s_title}		
-			가수 : ${d.s_artist}
-			발매일 : <fmt:formatDate value="${d.s_date}" pattern="YYYY-MM-dd"/>
-			<br>
-			${d.s_embed}
-			가사 : ${d.s_lyrics}
-		</c:forEach>
-    </div>
+	<div id="contents-container">
+		<div id="contents">
+		    <c:forEach var="d" items="${details}">
+			    <div id="details">
+				    <div id="titleDetails">
+				        <div id="d1">
+				        	<img src="${path}/resources/album/${d.s_album}" width="200" height="200">
+				        </div>
+			
+				        <div id="d1-info">
+					        <div id="d2">
+					              ${d.s_title}
+					        </div>
+					
+					        <div id="d3">
+					             ${d.s_artist}
+					        </div>
+					
+					        <div id="d4">
+					             <fmt:formatDate value="${d.s_date}" pattern="YYYY-MM-dd"/>
+					        </div>
+				        </div>
+			        </div>
+			
+			        <div id="d5">
+			        	${d.s_embed}
+			        </div>
+			
+			        <div id="d6">
+			         	${d.s_lyrics}
+			        </div>
+		      	</div>
+	        </c:forEach>
+	    </div>
+</div>
 <jsp:include page="common/footer.jsp"></jsp:include>
 </body>
 </html>

@@ -20,7 +20,7 @@
 	
 	<insert id="regMusic" parameterType="com.tp.project.music.Music">
 		insert into music values(
-		music_seq.nextval, #{s_title}, #{s_artist}, #{s_genre}, #{s_date}, #{s_album}, #{s_lyrics})
+		music_seq.nextval, #{s_title}, #{s_artist}, #{s_genre}, #{s_date}, #{s_album}, #{s_lyrics}, #{s_embed})
 	</insert>
 	
 	<!-- 음악 개수 구하기 --> 

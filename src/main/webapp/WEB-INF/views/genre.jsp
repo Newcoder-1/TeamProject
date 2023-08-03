@@ -7,12 +7,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인 페이지</title>
+<title>장르</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/searchMain.css">
 <script type="text/javascript" src="resources/jQuery.js"></script>
 <style>
-    /* 이미지 스타일 */
+   /* 이미지 스타일 */
     img {
         margin: 10px; /* 여백 */
     }
@@ -92,12 +92,13 @@
 	 -->
     
     <div id="contents">
-    	<table id="stable" border="0">
+    	<table id="stable" border="1">
     		<colgroup>
     			<col width="50px">
     			<col width="250px">
     			<col width="250px">
     			<col width="250px">
+    			<col width="100px">
     		</colgroup>
     		
     		<thead>
@@ -113,7 +114,7 @@
     </div>
     	
 	    <div id="pageDiv">
-			<table id="paging" class="searchpaging" border="0">
+			<table id="paging" class="searchpaging" border="1">
 				<tr>
 					<c:forEach var="i" begin="1" end="${pageNum }" step="1">
 						<td><a href="genre.do?s_genre=${genre }&page=${i }">${i }</a></td>
