@@ -9,26 +9,24 @@
 <title>회원가입 페이지</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/signUp.css">
+<script type="text/javascript"></script>
 <script type="text/javascript" src="resources/jQuery.js"></script>
-<script type="text/javascript">
-//아이디 중복 확인 함수
-
-</script>
+<script type="text/javascript" src="resources/js/validChecker.js"></script>
 </head>
 <body>
 <jsp:include page="../common/header.jsp"></jsp:include>
     <div id="contents">
-    	<form action="member.reg" method="post" id="joinForm">
+    	<form onsubmit="return validCheck()" action="member.reg" method="post" id="joinForm">
 		<h2>회원가입</h2>
 			<div class="textForm">
        			<input name="m_id" type="text" id="m_id" placeholder="아이디" autocomplete="off">
-      		</div>
-      		<div><button type="button" onclick="checkDuplicateId()">중복확인</button></div>
-			<div class="textForm">
-       			<input name="m_pw" type="text" id="m_pw" placeholder="비밀번호" autocomplete="off" onkeyup="passwordCheck()">
+	      		<button type="button" onclick="checkDuplicateId()">중복확인</button>
       		</div>
 			<div class="textForm">
-       			<input name="m_pw2" type="text" id="m_pw2" placeholder="비밀번호 확인" autocomplete="off" onkeyup="passwordCheck()">
+       			<input name="m_pw" type="password" id="m_pw" placeholder="비밀번호" autocomplete="off">
+      		</div>
+			<div class="textForm">
+       			<input name="m_pw2" type="password" id="m_pw2" placeholder="비밀번호 확인" autocomplete="off">
       		</div> 
 			<div class="textForm">
        			<input name="m_name" type="text" id="m_name" placeholder="이름" autocomplete="off">
@@ -45,11 +43,8 @@
 			<div class="textForm">
        			<input name="m_gender" type="text" id="m_gender" placeholder="성별" autocomplete="off">
       		</div>
-      		<!-- 
-      		<button id="btn" type="button" onclick="joinform_check();">회원가입</button>
-      		 -->
 			
-			<button id="btn">회원가입</button>
+			<button id="btn" type="submit">회원가입</button>
 		</form>
     </div> 
 

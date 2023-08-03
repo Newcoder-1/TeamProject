@@ -10,6 +10,8 @@
 <title>메인 페이지</title>
 <link rel="stylesheet" href="resources/css/main.css">
 <link rel="stylesheet" href="resources/css/searchMain.css">
+<script type="text/javascript"></script>
+<script type="text/javascript" src="resources/js/validChecker.js"></script>
 <style>
     /* 이미지 스타일 */
     img {
