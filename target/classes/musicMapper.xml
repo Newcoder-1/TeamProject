@@ -20,7 +20,7 @@
 	
 	<insert id="regMusic" parameterType="com.tp.project.music.Music">
 		insert into music values(
-		music_seq.nextval, #{s_title}, #{s_artist}, #{s_genre}, #{s_date}, #{s_album}, #{s_lyrics})
+		music_seq.nextval, #{s_title}, #{s_artist}, #{s_genre}, #{s_date}, #{s_album}, #{s_lyrics}, #{s_embed})
 	</insert>
 	
 	<!-- 음악 개수 구하기 --> 
@@ -33,5 +33,14 @@
 		select count(*) from music where
 			s_title like '%' || #{word} || '%'
 			or s_artist like '%' || #{word} || '%'
+	</select>
+	
+	<select id="genreMusicCount" parameterType="com.tp.project.music.Music" resultType="int">
+		select count(*) from music where s_genre = #{s_genre}
+	</select>
+	
+	<!-- 음악 상세정보 불러오기 -->
+	<select id="detailMusic" resultType="com.tp.project.music.Music">
+		select * from music where s_no = #{s_no}
 	</select>
 </mapper>

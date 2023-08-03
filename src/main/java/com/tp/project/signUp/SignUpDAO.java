@@ -1,5 +1,7 @@
 package com.tp.project.signUp;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +21,11 @@ public class SignUpDAO {
 	
 	public void regMember(SignUp s, HttpServletRequest req, HttpSession session) {
 		try {
+			String date_String = s.getM_birth_String();
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+			Date m_birth = sdf.parse(date_String);
+			s.setM_birth(m_birth);
+			
 			SignUpMapper sm = ss.getMapper(SignUpMapper.class);
 			
 			if (sm.regMember(s) == 1) {
@@ -50,9 +57,26 @@ public class SignUpDAO {
 			e.printStackTrace();
 		}
 	}
-
+	
+	public void updateMember(SignUp s, HttpServletRequest req) {
+		try {
+			SignUpMapper sm = ss.getMapper(SignUpMapper.class);
+			if (sm.updateMember(s) == 1) {
+				req.setAttribute("result", "성공");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 	
 }
+
+
+
+
+
+
+
 
 
 

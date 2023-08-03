@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+#contents-container {
+  	display: flex;
+  	justify-content: center;
+  	/*border: 1px solid;*/
+}
+
+#contents {
+ 	max-width: 1200px;
+  	margin: 0 auto;
+}
+
+#details {
+	display: flex;
+  	flex-direction: column;
+  	align-items: center; /* #details 내부의 요소들을 세로 중앙으로 정렬 */
+  	margin-bottom: 20px;
+}
+
+#titleDetails {
+ 	display: flex;
+  	justify-content: center; /* #titleDetails를 가로 중앙으로 정렬 */
+  	margin-bottom: 40px;
+}
+
+#d1 {
+	margin-top: 30px;
+}
+
+#d1-info {
+  	display: flex;
+  	flex-direction: column;
+  	margin-left: 30px;
+  	margin-top: 80px;
+}
+
+#d2 {
+	margin-bottom: 5px;
+	margin-top: 20px; /* #d6 위쪽에 20px의 마진을 추가 */
+}
+
+#d3 {
+	margin-bottom: 5px;
+	margin-top: 20px; /* #d6 위쪽에 20px의 마진을 추가 */
+}
+
+#d4 {
+	margin-bottom: 5px;
+	margin-top: 20px; /* #d6 위쪽에 20px의 마진을 추가 */
+}
+
+#d5 {
+	margin-bottom: 20px;
+	border: 1px solid;
+}
+
+#d6 {
+	max-width: 500px; /* 좁은 폭으로 제한 */
+  	margin: 0 auto; /* 가운데 정렬 */
+  	text-align: center; /* 내용을 가운데로 정렬 */
+  	margin-top: 20px; /* #d6 위쪽에 20px의 마진을 추가 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

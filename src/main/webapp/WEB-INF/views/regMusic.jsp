@@ -6,13 +6,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>메인 페이지</title>
+<title>음악 등록</title>
 <link rel="stylesheet" href="resources/css/main.css">
+<link rel="stylesheet" href="resources/css/regMusic.css">
+<link rel="stylesheet" href="resources/css/common.css">
 </head>
 <body>
 <jsp:include page="common/header.jsp"></jsp:include>
      <div id="contents">
-    	<form action="regMusic.do" method="post" enctype="multipart/form-data" id="">
+    	<form action="regMusic.do" method="post" enctype="multipart/form-data" id="regMForm">
 		<h2>음악등록</h2>
 			<div class="textForm">
        			<input name="s_title" type="text" id="s_title" placeholder="제목" autocomplete="off">
@@ -22,11 +24,11 @@
       		</div>
 			<div class="textForm">
        			<select name="s_genre" id="s_genre">
-       				<option value="J-POP">J-POP</option>
        				<option value="Ballad">Ballad</option>
        				<option value="HipHop">HipHop</option>
        				<option value="Dance">Dance</option>
        				<option value="Rock">Rock</option>
+       				<option value="J-POP">J-POP</option>
        				<option value="OST">OST</option>
        			</select>
       		</div>
@@ -37,8 +39,10 @@
        			<input name="s_album_file" type="file" id="s_album_file" placeholder="사진" autocomplete="off">
       		</div>
 			<div class="textForm">
-       			<textarea name="s_lyrics" rows="20" id="s_lyrics" placeholder="가사" autocomplete="off">
-       			</textarea>
+       			<textarea name="s_lyrics" rows="20" id="s_lyrics" placeholder="가사를 입력해주세요!" autocomplete="off"></textarea>
+      		</div>
+      		<div class="textForm">
+       			<input name="s_embed" type="text" id="s_embed" placeholder="영상 링크를 적어주세요!" autocomplete="off">
       		</div>
 			<button id="btn">음악등록</button>
 		</form>

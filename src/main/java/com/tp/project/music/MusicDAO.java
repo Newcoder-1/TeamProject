@@ -45,16 +45,32 @@ public class MusicDAO {
 			e.printStackTrace();
 		}
 	}
+	// 장르
+	public Musics genreMusic(String s_genre, HttpServletRequest req) {
+		return new Musics(ss.getMapper(MusicMapper.class).genreMusic(s_genre));
+	}
 	
-	public void genreMusic(String s_genre, HttpServletRequest req) {
+	public void mainMusic2(HttpServletRequest req) {
 		try {
-			List<Music> musics = ss.getMapper(MusicMapper.class).genreMusic(s_genre);
+			List<Music> musics = ss.getMapper(MusicMapper.class).mainMusic();
 			req.setAttribute("musics", musics);
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+	// 장르
+//	public void genreMusic(String s_genre, HttpServletRequest req) {
+//		try {
+//			List<Music> musics = ss.getMapper(MusicMapper.class).genreMusic(s_genre);
+//			req.setAttribute("musics", musics);
+//			
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
+	
+	// 음악등록
 	public void regMusic(Music m, HttpServletRequest req) {
 		try {
 			String date_String = m.getS_date_String();
@@ -77,6 +93,10 @@ public class MusicDAO {
 		return ss.getMapper(MusicMapper.class).searchMusicCount(word);
 	}
 	
+	public int genreMusicCount(HttpServletRequest req, String s_genre) {
+		return ss.getMapper(MusicMapper.class).genreMusicCount(s_genre);
+	}
+	
 	// 음악게시판 페이지 수  리턴
 	public int searchMusicPageCount(HttpServletRequest req, String word) {
 		int count = searchMusicCount(req, word);
@@ -87,6 +107,27 @@ public class MusicDAO {
 			pageCount++;
 		return pageCount;
 	}
+	
+	public int genreMusicPageCount(HttpServletRequest req, String s_genre) {
+		int count = genreMusicCount(req, s_genre);
+		int pageCount = 0;
+		int numPerPage = 10; // 페이지당 보여줄 항목 수
+		pageCount = count / numPerPage;
+		if (count % numPerPage != 0)
+			pageCount++;
+		return pageCount;
+	}
+	
+	// 음악 상세정보 불러오기
+		public void detailMusic(HttpServletRequest req, String s_no) {
+			try {
+				List<Music> details = ss.getMapper(MusicMapper.class).detailMusic(s_no);
+				req.setAttribute("details", details);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+
 }
 
 

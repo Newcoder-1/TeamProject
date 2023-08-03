@@ -55,7 +55,19 @@ public class MemberController {
 		sDAO.getAllSignUp(req);
 		return "redirect:/";
 	}
+	// 정보수정 이동
+	@RequestMapping(value = "/updateMember.go", method = RequestMethod.GET)
+	public String goUpdateMember(SignUp s, HttpServletRequest req) {
+		return "member/update";
+	}
 	
+	// 정보수정
+	@RequestMapping(value = "/updateMember.do", method = RequestMethod.POST)
+	public String updateMember(SignUp s, HttpServletRequest req) {
+		sDAO.updateMember(s, req);
+		
+		return "redirect:/";
+	}	
 
 	
 }
