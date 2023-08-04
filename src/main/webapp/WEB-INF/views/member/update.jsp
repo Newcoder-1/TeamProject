@@ -29,13 +29,13 @@
        			<input name="m_pw2" type="text" id="m_pw2" placeholder="비밀번호 확인" autocomplete="off" onkeyup="passwordCheck()">
       		</div> 
 			<div class="textForm">
-       			<input name="m_name" type="text" id="m_name" placeholder="이름" autocomplete="off" value="${mvo.m_name}">
+       			<input name="m_name" type="text" id="m_name" placeholder="이름" autocomplete="off" >
       		</div>
 			<div class="textForm">
-       			<input name="m_phone" type="text" id="m_phone" placeholder="번호" autocomplete="off" value="${mvo.m_phone}">
+       			<input name="m_phone" type="text" id="m_phone" placeholder="번호" autocomplete="off" >
       		</div>
 			<div class="textForm">
-       			<input name="m_email" type="text" id="m_email" placeholder="이메일" autocomplete="off" value="${mvo.m_email}">
+       			<input name="m_email" type="text" id="m_email" placeholder="이메일" autocomplete="off" >
       		</div>
 			<button id="btn">정보수정</button>
 		</form>

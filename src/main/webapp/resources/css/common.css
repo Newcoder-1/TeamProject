@@ -10,7 +10,9 @@ a {
 	color: black;
 }
 
-
+a:hover {
+	color: #6c5ce7;
+}
 
 #mainheader {
 	width: 100%;
@@ -65,14 +67,14 @@ a {
 
 #hello {
 	position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 5px;
+    right: 170px;
 }
 
 #regS {
 	position: absolute;
-    top: 50px;
-    right: 20px;
+    top: 35px;
+    right: 200px;
 }
 
 footer {

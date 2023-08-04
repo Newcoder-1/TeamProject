@@ -5,8 +5,7 @@ create table member (
 	m_name varchar2(50 char) not null,
 	m_birth date not null,
 	m_phone varchar2(50 char) not null,
-	m_email varchar2(50 char) not null,
-	m_gender varchar2(50 char) not null
+	m_email varchar2(50 char) not null
 );
 
 create sequence member_seq;
