@@ -30,10 +30,10 @@
 	      		 	<div><button id="btn2" type="button" onclick="checkDuplicateId()">중복확인</button></div>
 	      		 -->
 				<div class="textForm">
-	       			<input name="m_pw" type="text" id="m_pw" placeholder="비밀번호" autocomplete="off">
+	       			<input name="m_pw" type="password" id="m_pw" placeholder="비밀번호" autocomplete="off">
 	      		</div>
 				<div class="textForm">
-	       			<input name="m_pw2" type="text" id="m_pw2" placeholder="비밀번호 확인" autocomplete="off">
+	       			<input name="m_pw2" type="password" id="m_pw2" placeholder="비밀번호 확인" autocomplete="off">
 	      		</div> 
 				<div class="textForm">
 	       			<input name="m_name" type="text" id="m_name" placeholder="이름" autocomplete="off">

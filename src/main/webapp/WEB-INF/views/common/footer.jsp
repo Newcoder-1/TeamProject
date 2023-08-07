@@ -5,7 +5,7 @@
 <c:set var="contextPath" value="${pageContext.request.contextPath }"></c:set>
 <footer>
 	<nav>
-        <a href="${contextPath }">AnyTime</a> |
+        <a id="ft" href="${contextPath }">AnyTime</a> |
         <a href="https://github.com/Newcoder-1/TeamProject" >Github</a>
     </nav>
     <p>

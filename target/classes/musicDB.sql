@@ -22,7 +22,7 @@ select count(*) from music;
 
 update MUSIC set s_title = '빛나리' where s_no = 58;
 select * from music where s_no = 33;
-delete from music where s_no = 60;
+delete from music where s_no = 61;
 -------------------------------------------------------
 
 insert into music values(music_seq.nextval, '아이돌', '요아소비', 'J-POP', 

@@ -15,9 +15,16 @@
         var title = document.getElementById('s_title').value;
         var artist = document.getElementById('s_artist').value;
         var date = document.getElementById('s_date').value;
+        var albumFile = document.getElementById('s_album_file').value;
+        var lyrics = document.getElementById('s_lyrics').value;
 
-        if (title === "" || artist === "") {
-            alert("제목과 가수를 입력해주세요.");
+        if (title === "") {
+            alert("제목을 입력해주세요.");
+            return false;
+        }
+
+        if (artist === "") {
+            alert("가수를 입력해주세요.");
             return false;
         }
 
@@ -25,6 +32,16 @@
         var datePattern = /^\d{8}$/;
         if (!date.match(datePattern)) {
             alert("발매일은 8자리 숫자로 입력해주세요.");
+            return false;
+        }
+
+        if (albumFile === "") {
+            alert("사진을 첨부해주세요.");
+            return false;
+        }
+
+        if (lyrics === "") {
+            alert("가사를 입력해주세요.");
             return false;
         }
 
