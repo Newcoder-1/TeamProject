@@ -40,10 +40,10 @@
        			<input name="m_name" type="text" id="m_name" placeholder="이름" autocomplete="off" >
       		</div>
 			<div class="textForm">
-       			<input name="m_phone" type="text" id="m_phone" placeholder="번호" autocomplete="off" >
+       			<input name="m_phone" type="text" id="m_phone" placeholder="번호 ex)01011112222" autocomplete="off" >
       		</div>
 			<div class="textForm">
-       			<input name="m_email" type="text" id="m_email" placeholder="이메일" autocomplete="off" >
+       			<input name="m_email" type="text" id="m_email" placeholder="이메일 ex)qwe@asdf.com" autocomplete="off" >
       		</div>
 			<button id="btn">정보수정</button>
 		</form>
