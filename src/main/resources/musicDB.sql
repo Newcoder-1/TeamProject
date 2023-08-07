@@ -20,7 +20,9 @@ drop sequence music_seq;
 -- 전체 개수 구하기
 select count(*) from music;
 
-update MUSIC set s_genre = 'HipHop' where s_no = 13;
+update MUSIC set s_title = '빛나리' where s_no = 58;
+select * from music where s_no = 33;
+delete from music where s_no = 61;
 -------------------------------------------------------
 
 insert into music values(music_seq.nextval, '아이돌', '요아소비', 'J-POP', 

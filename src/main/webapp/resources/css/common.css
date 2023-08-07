@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+h1 {
+	font-family: "Dancing Script", cursive;
+	font-size: 55px; /* 원하는 글자 크기로 조정하세요 */
+}
+
+
 ul li {
 	list-style: none;
 	/*border: 1px solid;*/
@@ -10,7 +16,16 @@ a {
 	color: black;
 }
 
+a:hover {
+	color: #6c5ce7;
+}
 
+.ul-2 li a.active {
+  color: #6c5ce7; /* 활성 메뉴의 글자 색 */
+  background-color: #f2f2f2; /* 활성 메뉴의 배경색 */
+  border-bottom: 2px solid #6c5ce7; /* 활성 메뉴의 하단 보더 색 */
+  font-weight: bold; /* 활성 메뉴의 글자 굵기 */
+}
 
 #mainheader {
 	width: 100%;
@@ -65,14 +80,14 @@ a {
 
 #hello {
 	position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 5px;
+    right: 170px;
 }
 
 #regS {
 	position: absolute;
-    top: 50px;
-    right: 20px;
+    top: 35px;
+    right: 200px;
 }
 
 footer {
@@ -94,6 +109,11 @@ footer a {
 	display: inline-block;
 	margin: 0 20px 10px 20px;
 	font-size: 21px;
+}
+
+#ft {
+	font-family: "Dancing Script", cursive;
+	font-size: 30px;
 }
 
 footer a:visited {
